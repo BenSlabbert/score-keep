@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    // 62.5% of default font size (usually 16 px)
+    // so 62.5 % of 16 is 10
+    font-size: 62.5%;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2.4rem;
+}
+
+body {
+    color: #555555;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+@import './components/title-bar';
+@import './components/wrapper';
