@@ -54,7 +54,7 @@ Meteor.startup(() => {
     let jsx = (
       <div>
         {/* jsx comment */}
-        <TitleBar />
+        <TitleBar title={title} subtitle="my new subtitle" />
         {/* display jsx list */}
         {renderPlayers(players)}
         <AddPlayer />
