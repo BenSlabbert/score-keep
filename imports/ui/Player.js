@@ -7,8 +7,8 @@ export default class Player extends React.Component {
 
     render() {
         return (
-            <p key={this.props.player._id}>
-                {this.props.player.name + ':'} {this.props.player.score} point(s)
+            <div key={this.props.player._id} className="item">
+                <p>{this.props.player.name + ':'} {this.props.player.score} point(s)</p>
 
         <button onClick={() => {
                     Players.update(
@@ -21,7 +21,7 @@ export default class Player extends React.Component {
                 }>-1</button>
 
                 <button onClick={() => Players.remove(this.props.player._id)}>X</button>
-            </p>
+            </div>
         );
     }
 }
