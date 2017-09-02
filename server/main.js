@@ -26,5 +26,4 @@ Meteor.startup(() => {
     console.log(me);
     console.log(me.getGreeting());
     console.log(me.getPersonDescription());
-    
 });
