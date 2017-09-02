@@ -43,7 +43,7 @@ Meteor.startup(() => {
         <TitleBar title={title} subtitle="my new subtitle" />
         {/* display jsx list */}
         {renderPlayers(players)}
-        <AddPlayer score={10}/>
+        <AddPlayer />
       </div>
     );
     ReactDOM.render(jsx, document.getElementById('app'));
