@@ -1,7 +1,8 @@
 import React from 'react';
 import Proptypes from 'prop-types';
-import Player from './Player';
 import FlipMove from 'react-flip-move';
+
+import Player from './Player';
 
 export default class PlayerList extends React.Component {
 
