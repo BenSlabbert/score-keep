@@ -7,8 +7,14 @@ import { Players } from './../imports/api/players';
 
 const renderPlayers = (playersList) => {
 
-  return playersList.map((player) => 
-  <p key={player._id}>{player.name + ':'} {player.score} point(s)</p>);
+  return playersList.map((player) => {
+    return (
+      <p key={player._id}>
+        {player.name + ':'} {player.score} point(s)
+        <button onClick={() => Players.remove({ _id: player._id })}>X</button>
+      </p>
+    );
+  })
 };
 
 const handleSubmit = (e) => {
@@ -49,7 +55,6 @@ Meteor.startup(() => {
 
       </div>
     );
-
     ReactDOM.render(jsx, document.getElementById('app'));
   });
 });
