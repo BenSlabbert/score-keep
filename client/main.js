@@ -6,16 +6,7 @@ import { Tracker } from 'meteor/tracker';
 import { Players } from './../imports/api/players';
 import TitleBar from './../imports/ui/TitleBar';
 import AddPlayer from './../imports/ui/AddPlayer';
-import Player from './../imports/ui/Player';
-
-
-const renderPlayers = (playersList) => {
-
-  return playersList.map((player) => {
-    return <Player key={player._id} player={player} />;
-  });
-};
-
+import PlayerList from './../imports/ui/PlayerList';
 
 Meteor.startup(() => {
 
@@ -24,10 +15,8 @@ Meteor.startup(() => {
     let title = 'Score Keep';
     let jsx = (
       <div>
-        {/* jsx comment */}
         <TitleBar title={title} subtitle="my new subtitle" />
-        {/* display jsx list */}
-        {renderPlayers(players)}
+        <PlayerList players={players}/>        
         <AddPlayer />
       </div>
     );
