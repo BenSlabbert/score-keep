@@ -14,7 +14,7 @@ const renderPlayers = (playersList) => {
 
         <button onClick={() => {
           Players.update(
-            player._id, { $inc: { score: 1 } })
+            player._id, { $inc: { score: 1 } });
         }}>+1</button>
 
         <button onClick={() =>
@@ -25,7 +25,7 @@ const renderPlayers = (playersList) => {
         <button onClick={() => Players.remove(player._id)}>X</button>
       </p>
     );
-  })
+  });
 };
 
 const handleSubmit = (e) => {
