@@ -12,8 +12,35 @@ Meteor.startup(function () {
     // };
 
     // simplified expression function ... lambdas :D
-    let square = (x) => x * x;
+    // let square = (x) => x * x;
+    // console.log(square(10));
 
-    console.log(square(10));
+    // let user = {
+    //     name: 'ben',
+    //     sayHi() {
+    //         setTimeout(() => {
+    //             console.log(this.name);
+    //         }, 1000);
+    //     }
+    // };
+
+    // user.sayHi();
+
+    let adder = (x) => x + 1;
+
+    let numbers = [9, 99, 4, 56];
+    let newNumbers = numbers.map((number) => {
+        return number + 1;
+    });
+
+    console.log(newNumbers);
+
+    newNumbers = numbers.map((number) => number + 1);
+
+    console.log(newNumbers);
+
+    newNumbers = numbers.map(adder);
+
+    console.log(newNumbers);
 
 });
