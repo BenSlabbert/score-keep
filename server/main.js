@@ -6,6 +6,4 @@ Meteor.startup(function () {
         name: 'Matt',
         score: 3
     });
-
-    console.log(Players.find().fetch());
 });
